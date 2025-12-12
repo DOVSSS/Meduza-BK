@@ -1,6 +1,7 @@
+// medusa-config.js - ОКОНЧАТЕЛЬНАЯ ВЕРСИЯ
 module.exports = {
   projectConfig: {
-    // ВАЖНО: порт для Render
+    // ⚠️ ВАЖНО: порт ДОЛЖЕН быть из process.env для Render
     port: parseInt(process.env.PORT || 9000, 10),
     
     // База данных
@@ -8,8 +9,8 @@ module.exports = {
     database_type: "postgres",
     
     // Секретные ключи
-    jwt_secret: process.env.JWT_SECRET || "default_jwt_secret_change_in_production",
-    cookie_secret: process.env.COOKIE_SECRET || "default_cookie_secret_change_in_production",
+    jwt_secret: process.env.JWT_SECRET || "change_this_in_production",
+    cookie_secret: process.env.COOKIE_SECRET || "change_this_in_production",
     
     // CORS настройки
     store_cors: process.env.STORE_CORS || "http://localhost:3000,exp://*",
